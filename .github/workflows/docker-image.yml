@@ -29,7 +29,7 @@ jobs:
     #   npm run build
     #   echo $(ls -1 .)
       run: |
-        dotnet build --no-restore
+        dotnet build LearnApi/LearnApi.sln --no-restore
         echo $(ls -1 .)
     # modify-end
     - name: Build the Docker image
