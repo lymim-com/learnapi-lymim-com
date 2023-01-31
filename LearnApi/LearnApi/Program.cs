@@ -30,7 +30,13 @@ namespace LearnApi
                         TemperatureC = Random.Shared.Next(-20, 55),
                         Summary = summaries[Random.Shared.Next(summaries.Length)]
                     })
-                    .ToArray();
+                    .ToList();
+                forecast.Add(new WeatherForecast
+                {
+                    Date = DateTime.Now.AddDays(0),
+                    TemperatureC = Random.Shared.Next(-20, 55),
+                    Summary = "Happy day!!!",
+                });
                 return forecast;
             });
 
